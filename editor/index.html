@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FullPageEditor</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="knockout-3.5.1.js"></script>
+	<script type="module" src="editor_app.js"></script>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<div id="menuLeft" class="menu left vertical">
+		<!-- ko foreach: {data:tools, as:'tool'}-->
+		<div class="menuButton tool" data-bind="class:tool.label, attr:{'toolIndex':toolIndex()}, css:{active:active}, click: (ev) => $root.setActiveTool(toolIndex())"></div>
+		<!-- /ko -->
+	</div>
+	<!-- ko if: (activeTool() && (activeTool().editables.length > 0 || activeTool().actions.length > 0)) || (selectedThing() && selectedThing().editables.length > 0) -->
+		<div id="menuRight" class="menu right vertical">
+
+			<!-- ko if: activeTool() && activeTool().actions.length > 0 -->
+				<!-- ko foreach: activeTool().actions -->
+					<div class="menuButton" data-bind="click:execute, text:name"></div>
+				<!-- /ko -->
+			<!-- /ko -->
+
+			<!-- ko if: activeTool() && activeTool().editables.length > 0 -->
+				<!-- ko foreach: activeTool().editables -->
+					<div class="contextValue">
+						<span data-bind="text:label"></span>
+						<div>
+							<!-- ko if: "text" == type -->
+								<input type="text" data-bind="value:value, valueUpdate:'input'">
+							<!-- /ko -->
+							<!-- ko if: "color" == type -->
+								<input type="color" data-bind="value:value, valueUpdate:'input'">
+							<!-- /ko -->
+							<!-- ko if: "select" == type -->
+								<select data-bind="value:value, 
+									valueUpdate:'input',
+									options: options,
+									optionsValue: 'value',
+                       				optionsText: 'label'">
+								</select>
+							<!-- /ko -->
+						</div>
+					</div>
+				<!-- /ko -->
+			<!-- /ko -->
+
+			<!-- ko if: selectedThing() && selectedThing().editables.length > 0 -->
+				<!-- ko foreach: selectedThing().editables -->
+				<div class="contextValue">
+					<span data-bind="text:label"></span>
+					<div>
+						<!-- ko if: "text" == type -->
+							<input type="text" data-bind="value:value, valueUpdate:'input'">
+						<!-- /ko -->
+						<!-- ko if: "color" == type -->
+							<input type="color" data-bind="value:value, valueUpdate:'input'">
+						<!-- /ko -->
+						<!-- ko if: "select" == type -->
+							<select data-bind="value:value, 
+								valueUpdate:'input',
+								options: options,
+								optionsValue: 'value',
+								optionsText: 'label'">
+							</select>
+						<!-- /ko -->
+					</div>
+				</div>
+				<!-- /ko -->
+			<!-- /ko -->
+		</div>
+	<!-- /ko -->
+	<div id="export" class="hidden">
+		<textarea data-bind="value:exportData"></textarea><br>
+		<button id="btnImport">import</button>
+		<button id="btnImportMinified">import minified</button>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button id="btnExport">export</button>
+		<button id="btnExportMinified">export minified</button>
+		<button id="btnClose">close</button>
+	</div>
+</body>
+</html>

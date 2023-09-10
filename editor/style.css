@@ -1,0 +1,137 @@
+:root {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#canvas {
+	background-color: #000000;
+	width:100vw;
+	height:100vh;
+	display:block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+#export {
+	position:absolute;
+	left:10vw;
+	top:5vh;
+}
+.hidden {
+	display: none;
+}
+#export textarea {
+	width:80vw;
+	height:40vh;
+}
+
+.menu {
+	z-index:100;
+	position: absolute;
+	border: 1px solid #ffffff;
+	border-radius: 3px;
+	display:flex;
+	background-color: #333333;
+	transition: all ease-in-out .2s;
+	opacity:1;
+	box-shadow: 0 0 0 #ffffff00;
+}
+.menu:hover {
+	box-shadow: 0 0 10px #ffffffaa;
+}
+.menu.vertical {
+	width: 20rem;
+}
+.menu.horizontal {
+	height:auto;
+	left:20rem;
+}
+
+.menu.left {
+	left:0;
+	top:30px;
+	flex-direction: column;
+	width:auto;
+}
+.menu.right {
+	right:0;
+	top:30px;
+	flex-direction: column;
+}
+.menu.bottom {
+	bottom:0px;
+	flex-direction: row;
+}
+
+.menuButton {
+	flex:1 1 auto;
+	border: 1px solid #cccccc;
+	margin:2px;
+	padding:2px;
+	background-color: #555555;
+	color:#ffffff;
+	border-radius: 3px;
+	cursor:pointer;
+	overflow:hidden;
+	white-space: nowrap;
+	text-align: center;
+}
+.menuButton:hover {
+	background-color: #777777;
+}
+.tool {
+	width:32px;
+	height: 32px;
+	padding: 0;
+	background-repeat: no-repeat;
+	background-image: url(assets/tools.png);
+}
+.tool.active {
+	background-color: #ff9d64;
+	color:#000000;
+}
+
+.tool.select {
+	background-position-x: -128px;
+}
+.tool.hand {
+	background-position-x: -96px;
+}
+.tool.rectangle {
+	background-position-x: 0;
+}
+.tool.path {
+	background-position-x: -64px;
+}
+.tool.circle {
+	background-position-x: -32px;
+}
+
+.grab {
+	cursor:grab;
+}
+
+.grabbing {
+	cursor:grabbing;
+}
+
+.contextValue {
+	display: flex;
+	flex-direction: row;
+}
+.contextValue * {
+	flex:1 1 70%;
+}
+.contextValue span {    
+	color: #ffffff;
+    padding-top: 0.2rem;
+    padding-right: 0.5rem;
+    flex-basis: 30%;
+    text-align: right;
+}

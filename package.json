@@ -1,0 +1,39 @@
+{
+  "name": "witchcup1276",
+  "version": "1.0.0",
+  "description": "js13kgamejam 2023 - 13th century",
+  "main": "index.html",
+  "scripts": {
+    "build": "gulp"
+  },
+  "author": "Christoph Schansky",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "babel-minify": "^0.5.2",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-babel-minify": "^0.5.2",
+    "gulp-check-filesize": "^2.0.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^4.0.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-htmllint": "0.0.15",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-rimraf": "^0.2.2",
+    "gulp-stylelint": "^7.0.0",
+    "gulp-terser": "^1.0.1",
+    "gulp-uglify-es": "^3.0.0",
+    "gulp-zip": "^4.2.0",
+    "stylelint": "^9.4.0",
+    "stylelint-config-standard": "^18.2.0",
+    "terser": "^5.14.2"
+  }
+}
