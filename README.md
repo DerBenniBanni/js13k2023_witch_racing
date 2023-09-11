@@ -1,5 +1,7 @@
 # js13kgames 2023: Witch Cup
 
+![title image](https://github.com/DerBenniBanni/js13k2023_witch_racing/blob/main/witchcup400x250.jpg?raw=true)
+
 Thats my entry for the 2023 js13kgames Jam
 
 to build the (below) 13kb-zipfile use "npm run build"
