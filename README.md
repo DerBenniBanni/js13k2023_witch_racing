@@ -16,14 +16,17 @@ How to play:
 
 You play the witch dressed in classic black.
 
-Use Arrow-Keys or WASD to steer your witch (up = accelerate, down = break, left and right turn the broom)
+Use [Arrow]-Keys or [WASD] to steer your witch (up = accelerate, down = break, left and right turn the broom)
 
-Use Space to cast a jinx wich will stun your opponent (if you can hit her)
+Use [Space] to cast a jinx wich will stun your opponent (if you can hit her)
+
+Use [Escape] during the race to pause and display some options (restart, abort, continue)
 
 The Jinx-Cooldowntime and the brooms speed/turnrate may be updated using your earned witchcraftpoints.
 
 
 The music during the race is a cover version of "Furatum Alci Provinciam" by CORVUS CORAX (Die Könige der Spielleute! Go check them out!)
-(Thx to Castus from Corvus Corax and Doro Peters from Absolut Promotion for the granted permission to use the composition!)
-And it was created using Soundbox from sb.bitsnbites.eu 
+
+Special thanks to Castus (and Norri, Hatz, Micha, Victor, Xandru and Alex) from Corvus Corax and Doro Peters from Absolut Promotion for the granted permission to use the composition!
+The song was created using Soundbox from sb.bitsnbites.eu 
 
