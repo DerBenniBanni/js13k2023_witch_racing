@@ -200,7 +200,7 @@ class Game {
         this.w = window.innerWidth;
         this.h = window.innerHeight;
 
-        this.optMusic = false;
+        this.optMusic = true;
         this.optCollide = true;
         
         this.sprites = [];
@@ -250,9 +250,9 @@ class Game {
         if(this.keys[ev.code]) {
             this.actions[this.keys[ev.code]] = true;
         }
-        if(ev.code == 'KeyI') {
-            this.dbg = !this.dbg;
-        }
+        //if(ev.code == 'KeyI') {
+        //    this.dbg = !this.dbg;
+        //}
         if(ev.code == 'Escape') {
             if(this.state == STATE_RACE) {
                 this.displayRaceMenu(true);
@@ -947,7 +947,7 @@ const hitsAnything = (game, p, isP, jinx) => {
             if(w.dizzy > 0)  {
                 continue;
             }
-            let c = new ColCircle(w.p.x, w.p.y, 9);
+            let c = new ColCircle(w.p.x, w.p.y, jinx ? 15 : 9);
             if(c.isInside(p)) {
                 if(jinx) {
                     jinx.damage(w);
@@ -1319,7 +1319,7 @@ class Jinx extends Sprite {
         super(o);
         this.rot = o.rot;
         this.ttl = 5;
-        this.speed = 400;
+        this.speed = 480;
         this.col = new Color(o.col || '#ffdd0088');
         this.col = this.col.rand(80);
     }
