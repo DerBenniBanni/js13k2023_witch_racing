@@ -13,11 +13,17 @@ The contestants will race each other on four different courses, one harder than 
 Beware of low flying brooms and jinxes!
 
 How to play:
+
+You play the witch dressed in classic black.
+
 Use Arrow-Keys or WASD to steer your witch (up = accelerate, down = break, left and right turn the broom)
+
 Use Space to cast a jinx wich will stun your opponent (if you can hit her)
 
 The Jinx-Cooldowntime and the brooms speed/turnrate may be updated using your earned witchcraftpoints.
 
 
 The music during the race is a cover version of "Furatum Alci Provinciam" by CORVUS CORAX (Die Könige der Spielleute! Go check them out!)
-(Thx to Castus from Corvus Corax and Doro Peters from Absolut Promotion for the permission to use the composition!)
+(Thx to Castus from Corvus Corax and Doro Peters from Absolut Promotion for the granted permission to use the composition!)
+And it was created using Soundbox from sb.bitsnbites.eu 
+
