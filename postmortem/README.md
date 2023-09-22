@@ -11,6 +11,8 @@ The second decision was, that it will be a 2.5d top-down view, like the old Amig
 
 some lines and MANY ellipses
 
+![trees-concept](assets/trees_concept.jpg)
+
 ### Adding a subspecies: Pines
 
 ### Rocks
