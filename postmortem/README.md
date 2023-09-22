@@ -24,7 +24,8 @@ So what should i do now? I really liked the look of the trees, and that every tr
 
 ![tree](assets/tree.jpg)
 
-The rescue: Prerendered images in offcreen-canvases, stored in an image-pool. 
+### Prerendering
+The rescue: Prerendered images in offscreen-canvases, stored in an image-pool. 
 
 I added 50 tree-images to the pool, end every time when i place a new tree, it fetches its image-index from the pool, returning to the first image, when the full count is reached. Upon rendering I just paint that image to the game-canvas. 
 
@@ -49,10 +50,6 @@ The process is mostly the same, only the regions for the leaves are now stacked 
 ## Witches
 
 Some circles and lines
-
-## Prerendering the graphics
-
-Rendering hundredthousand ellipses every frame is a bad idea..
 
 ## Background graphics
 
