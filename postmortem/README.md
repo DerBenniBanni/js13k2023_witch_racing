@@ -22,6 +22,8 @@ So, as further refinement, i added "leaves" to the stack. Each of the ellipses n
 This resulted in a framerate of 60 fps (limited by getAnimationframe, i guess) for 150 trees on my gaming-pc (which i used at that state for development) and in about 0.2 frames per second (1 frame every 5 seconds) on my older (10 years) laptop. Oopsie. :-)
 So what should i do now? I really liked the look of the trees, and that every tree i placed looked different.
 
+![tree](assets/tree.jpg)
+
 The rescue: Prerendered images in offcreen-canvases, stored in an image-pool. 
 
 I added 50 tree-images to the pool, end every time when i place a new tree, it fetches its image-index from the pool, returning to the first image, when the full count is reached. Upon rendering I just paint that image to the game-canvas. 
@@ -30,7 +32,19 @@ Now even my old laptop could render many hundred trees in 60fps.
 
 ### Adding a subspecies: Pines
 
+"Same, same! But different!"
+
+To add a bit more diversity in my forest, i decided to create a second type of trees: conifers
+
+![pines-concept](assets/pines_concept.jpg)
+
+The process is mostly the same, only the regions for the leaves are now stacked and get smaller to the top.
+
+![pine](assets/pine.jpg)
+
 ### Rocks
+
+![pine](assets/rock.jpg)
 
 ## Witches
 
