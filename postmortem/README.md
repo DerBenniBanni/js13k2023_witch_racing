@@ -45,6 +45,8 @@ The process is mostly the same, only the regions for the leaves are now stacked 
 
 ### Rocks
 
+For the rocks i skipped the tree-trunk and tweaked the position-related color-correction a bit, but mostly its the same process as for the trees: just many little details with slighly random colors.
+
 ![pine](assets/rock.jpg)
 
 ## Witches
