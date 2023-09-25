@@ -51,11 +51,21 @@ For the rocks i skipped the tree-trunk and tweaked the position-related color-co
 
 ## Witches
 
-Some circles and lines
+The Witches consist of some lines for the broom, a tilted ellipse for the body, a head and a hat (and a semi-transparent shadow below). These elements are rendered from bottom up, very similar to sprite-stacking, only with draw-commands instead of images.
+
+![witch](assets/witch.jpg)
+
+The coordinates of the broom-lines and the till of the body can easily be rotated around the center line, so i added another image-pool for each witch, containing one image per rotation-degree (360 images per witch). During rendering i just use Math.round() to get the int-value of my current rotation, and paint the matching image from the pool. This results in super-smooth and fast rendering of each rotation-value. (OK! 360 images might be a little overkill...)
 
 ## Background graphics
 
-Second canvas below
+Until now, the background only had a dark-green color. Pretty boring. So i added some thousand little lines for a grass-texture and some colored dots for flowers.
+
+![grass](assets/grass.jpg)
+
+Obviously, thats not something i could do every frame, beacuse, it would move all the time resulting in ~~white~~ green noise.
+
+So, i use a separate canvas, positioned below the canvas for the trees and witches, taht only is redrawn when a level is loaded. The finish-line and dirt-tracks are also painted into this canvas, because they are always below the other sprites. 
 
 ## Editor for Racetracks
 
