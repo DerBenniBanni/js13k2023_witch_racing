@@ -1,11 +1,11 @@
 # Post Mortem for Witch Cup 1276
 
-**IN PROGRESS**
-
 The theme "13th century" was announced, and somehow, in the first minutes, it was clear to me: I want to do a racing game, with witches! (inspired by some books like "Wyrd Sisters" from Terry Prattchett right next to my desk)
 
 So where to start? As my pixel-skills are ~~not the best~~ miserable i decided to create the graphics using the drawing tools from canvas and some kind of random generators.
 The second decision was, that it will be a 2.5d top-down view, like the old Amiga games often used (i.e. "Super Off Road")
+
+Also my mantra since the last js13kgames jam was "Thou shalt implement a fun gameplay before anything else". So, what to do first? Yes. Graphics! ;-) 
 
 ## The first pixels: Trees
 
@@ -69,8 +69,36 @@ So, i use a separate canvas, positioned below the canvas for the trees and witch
 
 ## Editor for Racetracks
 
-More tracks, and editable tracks
+One thing i learned in the past is, to write an editor for the games content as early as possible. As i had to place many trees and rocks for the tracks, and wanted to have multiple tracks in the game, i created a simple editor to define different paths for everything. 
+
+![editor](assets/racetrackeditor.jpg)
+
+The paths for trees and rocks define the racetrack. Trees and rocks are placed along the path with a bit of random noise for the exact position of each tree/rock.
+
+The computer controlled witches uses another path, navigation from point to point (also with a tiny random factor, so not all witches will fly the exact same route)
+
+The dirt-tracks are also just another path-type, where the dirt-particles are painted along (rotated to the orientation of the path-segment, which creates the orientation of the dirt-track)
+
+Finally i added some boxes as checkpoints, which the player (and the other witches) need to pass in the correct order to be able to count the laps and prevent cheating.
+
+The editor is also added here in the repository, it just has to be in a webserver-environment, as it uses javascript-imports.
 
 ## Music
 
-Corvus Corax and Soundbox
+In search of matching music for the game, i decided to make a coverversion of a song from Corvus Corax: Furatum Alci Provinciam
+
+After a full evening of listening to the song and clicking in <a href="https://sb.bitsnbites.eu" target="_blank">soundbox</a>, i was happy with the <a href="https://sb.bitsnbites.eu/?data=U0JveA4C7d0_b9NAGMfx585OWFxYKrFESpaOqKC2EiKqusCMEAyRkPijbswdIqDCQhVTVVm2jLOQ18LKa-AlMPASjO2Lk-D6YqnQ_IHvR3pyfu6a9pfrqcsNfX5TpC-9tv4eiT7x29LpHt-XzENHOXdP5emBO1QiSmknL7fVvlE-l70Uys5tKWVeTR9IKFFWZowlKb46mI7XzavtvenYraz3i9fudExklFWcZTdpo-I5LJ6vP_0sv20s8-9b-vn84aXMwcryS2X_y7wvf1vvZsllsutSnJm46MxnkaXtv2c5R7Pzsl97jqQ2__L337PufzV_df9NwrDY8_IzyHQcrV3-fiV_Mvkt1J9_WXH-y-fnWAAAAAAAAAAAGyF9u-d886XTl51DM6P0m7E8EXnvqCsov-9wUrZ-3Z01jAAAAAAAAAAAAPi_OKkvkp6LfNDbu_nN2itHOS8eS--Z9lz1B8ofcFbU7Dqq2gMAAAAAAAAAAACbQP94J_rricjpYDgo57Zex8mha3tLfm2m9fwlWt6ZmdlrsOEbE3M2AAAAAAAAAAAAMEenvuiP_i3Zvn10r5x7NJTerh6pxW8t_plaq21ZTSzz0YK1v8lrmP9sWT-YjLaLtVCWc-nWlP-iIX9kWQ8WrK3T_ocL8l9sQP4gS2myRrX9MvKb8mr7nazuZNWRo9p-1RfjWw3rn_jbDQAAAAAAAABYiXNT6Xg8zts9rfSDn9IbqC86v1m7aoXsLAAAAAAAAAAAAP4hvwA" target="_blank">result</a>.
+
+I even contacted <a href="https://www.corvuscorax.de" target="_blank">Corvus Corax</a> for the permission to use this cover of their song, and got the "ok" from them soon, hooray!
+
+## The end
+
+I wrote the whole game from scratch, as my own (unnamed, homebrewed) framework i normally use (which is inspired by kontra.js) is to large for 13kb games. (The editor uses the framework) I think, I'll keep that approach for the next years of js13kgames.
+
+I started to write the game purely object orientated, later on i switched the codes style to use more and more lambda functions too. So the result looks kind of messy.
+
+I initially planned a local multiplayer mode, but id did not fit in the end (size-limt, and out of time)
+
+I ahd planned much more obstacles (watching crowds, fences, cows, sheep,...) and wanted to do some theme-variations (autumn, spring, other regions than woodland,...) but had to drop that ideas because of the size. And time. Maybe there will be a post-compo-version :-)
+
+
