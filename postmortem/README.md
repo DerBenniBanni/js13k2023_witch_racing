@@ -99,6 +99,6 @@ I started to write the game purely object orientated, later on i switched the co
 
 I initially planned a local multiplayer mode, but id did not fit in the end (size-limt, and out of time)
 
-I ahd planned much more obstacles (watching crowds, fences, cows, sheep,...) and wanted to do some theme-variations (autumn, spring, other regions than woodland,...) but had to drop that ideas because of the size. And time. Maybe there will be a post-compo-version :-)
+I had planned to add much more obstacles (watching crowds, fences, cows, sheep,...) and wanted to do some theme-variations (autumn, spring, other regions than woodland, lakes,...) but had to drop that ideas because of the size. And time. Maybe there will be a post-compo-version :-)
 
 
